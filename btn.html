@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positive Quotes</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      background-color: #090e38;
+      color: rgb(235, 216, 216);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #280f67;
+    }
+
+    #quote {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #444;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click for a Positive Quote </h1>
+  <button onclick="showQuote()">Show Quote</button>
+  <p id="quote"></p>
+
+  <script>
+    const quotes = [
+      "Smile, it's a beautiful day!",
+      "You can do hard things.",
+      "Dream big and dare to fail.",
+      "You are stronger than you think.",
+      "Positivity always wins.",
+      "Your only limit is your mind.",
+      "One kind word can change someone’s day.",
+      "You’ve got this!"
+    ];
+
+    function showQuote() {
+      const index = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[index];
+    }
+  </script>
+</body>
+</html>
+

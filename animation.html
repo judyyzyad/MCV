@@ -1,0 +1,64 @@
+<
+<!DOCTYPE html>
+<html>
+<head>
+  <title> EMOJI</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(0, 0, 0); 
+    }
+
+    .container {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(206, 71, 71); 
+      
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      overflow: hidden;
+    }
+
+    .emoji1 {
+      position: absolute; 
+      left: 10px;
+      top: 10px;
+      font-size: 2rem;
+      animation: move 2s infinite alternate ;
+    }
+
+    @keyframes move {
+      from {
+        left: 10px;
+        top: 10px;
+      }
+      to {
+        left: 50px;
+        top: 50px;
+      }
+    }
+    .emoji2 {
+        position: absolute;
+        left: 100px;
+        top: 20px;
+        font-size: 2rem;
+        animation: rotateEmoji 2s ;
+
+    }
+    @keyframes rotateEmoji {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="emoji emoji1">🥳</span>
+    <span class="emoji emoji2">😂</span>
+   
+
+  </div>
+</body>
+</html>

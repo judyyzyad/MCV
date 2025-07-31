@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Human Emoji Orbit</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      background-color: #5b1ee9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 50px auto;
+    }
+
+    .emoji {
+      font-size: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100px);
+      transform-origin: center 100px;
+    }
+    .animate {
+      animation: spin 2s linear;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg) translate(-50%, -100px) rotate(0deg); }
+      to   { transform: rotate(360deg) translate(-50%, -100px) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="rotateEmoji()">spin around🕺</button>
+
+  <div class="orbit-container">
+    <div class="emoji" id="emoji">🕺</div>
+  </div>
+
+  <script>
+    function rotateEmoji() {
+      const emoji = document.getElementById("emoji");
+      emoji.classList.remove("animate");
+      void emoji.offsetWidth;
+      emoji.classList.add("animate");
+    }
+  </script>
+
+</body>
+</html>
+

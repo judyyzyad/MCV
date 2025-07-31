@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Traffic Light</title>
+  <style>
+    body {
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .traffic {
+      background: black;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    .light {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 10px auto;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+    .red { background: red; }
+    .yellow { background: yellow; }
+    .green { background: green; }
+    @media (min-width: 801px) {
+      .red { opacity: 1; }
+    }
+    @media (min-width: 501px) and (max-width: 800px) {
+      .yellow { opacity: 1; }
+    }
+    @media (max-width: 500px) {
+      .green { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="traffic">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+  </div>
+</body>
+</html>
+
+
